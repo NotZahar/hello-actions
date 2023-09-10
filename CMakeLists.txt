@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(hello_actions VERSION ${PROJECT_VESRION})
-
 set(PATCH_VERSION 1 CACHE INTERNAL "Patch version")
 set(PROJECT_VESRION 0.0.${PATCH_VERSION})
+
+project(hello_actions VERSION ${PROJECT_VESRION})
 
 find_package(GTest REQUIRED)
 
@@ -53,6 +53,7 @@ else ()
         -Wall -Wextra -pedantic -Werror
     )
 endif()
+
 
 
 install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
